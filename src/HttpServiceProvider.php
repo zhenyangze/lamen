@@ -77,11 +77,17 @@ abstract class HttpServiceProvider extends ServiceProvider
             __DIR__ . '/../config/swoole_http.php' => base_path('config/swoole_http.php'),
             __DIR__ . '/../config/swoole_lumen.php' => base_path('config/swoole_lumen.php'),
             __DIR__ . '/../config/swoole_websocket.php' => base_path('config/swoole_websocket.php'),
-            __DIR__ . '/../routes/websocket.php' => base_path('routes/websocket.php')
-        ], 'laravel-swoole');
+            __DIR__ . '/../routes/websocket.php' => base_path('routes/websocket.php'),
+            __DIR__ . '/FrameWork/artisan_lumen' => base_path('artisan_lume'),
+            __DIR__ . '/FrameWork/public/index.php' => base_path('public/lamen.php')
+        ], 'lamen-swoole');
 
         if ($this->app['config']->get('swoole_http.websocket.enabled')) {
             $this->bootRoutes();
+        }
+
+        if (!defined('FRAME_WORK_NAME')) {
+            define('FRAME_WORK_NAME', $this->framework);
         }
     }
 

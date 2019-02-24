@@ -25,7 +25,7 @@ if (!function_exists('get_lamen_config')) {
     function get_lamen_config($key = null) 
     {
         $baseFile = __DIR__ . '/../../config/lamen.php';
-        $userFile = ROOT_PATH . '/lamen.php';
+        $userFile = ROOT_PATH . '/config/lamen.php';
         $baseConfig = include $baseFile;
         $userConfig = [];
         if (is_file($userFile)) {

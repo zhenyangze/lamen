@@ -84,7 +84,7 @@ foreach(get_lamen_config('providers') as $provider) {
 }
 
 use Symfony\Component\Finder\Finder;
-foreach(get_lamen_config('config') as $configPath) {
+foreach(get_lamen_config('configs') as $configPath) {
     foreach (Finder::create()->files()->name('*.php')->in($configPath) as $file)
     {
         $filename = trim($file->getFileName(), '.php');
