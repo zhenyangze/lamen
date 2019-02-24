@@ -37,7 +37,9 @@ php artisan lamen:http start
 ```php
 php artisan_lume lamen:http start
 ```
+
 **以nginx+php-fpm模式运行**
+
 注意修改public/lamen.php文件，将其设置为入口文件。有2种方法，2选1：
 - nginx 配置文件中 index 设置为lamen.php
 - 移动public/lamen.php为public/index.php
