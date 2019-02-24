@@ -20,7 +20,7 @@ Lamen\Http\LaravelServiceProvider::class
 ```
 3、发布配置文件
 ```php
-php artisan vendor:publish --tag=Lamen\Http\LaravelServiceProvider
+php artisan vendor:publish --tag=lamen-swoole
 ```
 4、修改config/lamen.php文件（**重要，影响程序运行**）
 ### 变量说明
