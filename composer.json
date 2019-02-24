@@ -1,0 +1,43 @@
+{
+    "name": "yangze/Lamen",
+    "description": "use lumen in laravel framework, support php-fpm and swoole model.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhenyangze",
+            "email": "zhenyangze@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "5.5.*",
+        "laravel/lumen-framework": "5.5",
+        "illuminate/console": "~5.1",
+        "illuminate/contracts": "~5.1",
+        "illuminate/http": "~5.1",
+        "illuminate/support": "~5.1",
+        "predis/predis": "^1.1"
+    },
+    "autoload": {
+        "files": [
+            "src/Server/helpers.php"
+        ],
+        "psr-4": {
+            "Lamen\\Http\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lamen\\Http\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "Server": "Lamen\\Http\\Server\\Facades\\Server",
+                "Table": "Lamen\\Http\\Server\\Facades\\Table",
+                "Room": "Lamen\\Http\\Websocket\\Facades\\Room",
+                "Websocket": "Lamen\\Http\\Websocket\\Facades\\Websocket"
+            }
+        }
+    }
+}
