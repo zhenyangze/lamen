@@ -4,7 +4,7 @@
 Lumen可以使用Laravel框架大分部代码，包含配置，路由，控制器，模型，集合，缓存，队列，事件
 
 **目前代码先在laravel5.5中测试**
-**在仓库`[swooletw/laravel-swoole](https://github.com/swooletw/laravel-swoole)`基础上修改**
+**在仓库[swooletw/laravel-swoole](https://github.com/swooletw/laravel-swoole)基础上修改**
 **貌似注意事项好多，有问题请留言**
 
 ### 快速上手
@@ -27,6 +27,19 @@ php artisan vendor:publish --tag=Lamen\Http\LaravelServiceProvider
 | 键 | 名称 | 值 |
 |--------|--------|--------|
 |FRAME_WORK_NAME|当前框架的名称|laravel 或者 lumen|
+5、运行
+**以laravel模型运行**
+```php
+php artisan lamen:http start
+```
+**以lumen模式运行**
+```php
+php artisan_lume lamen:http start
+```
+**以nginx+php-fpm模式运行**
+注意修改public/lamen.php文件，将其设置为入口文件。有2种方法，2选1：
+- nginx 配置文件中 index 设置为lamen.php
+- 移动public/lamen.php为public/index.php
 
 ### 配置文件说明
 ### 运行方式
