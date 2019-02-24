@@ -1,4 +1,4 @@
-# laravel-along-with-lumen
+# Lamen: laravel along with lumen
 在laravel框架中支持Lumen的运行，运行模式包含php-fpm和swoole两种模式。
 
 Lumen可以使用Laravel框架大分部代码，包含配置，路由，控制器，模型，集合，缓存，队列，事件
