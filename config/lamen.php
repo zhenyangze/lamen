@@ -20,11 +20,11 @@ return [
     'bootstrap' => [
         'laravel' => ROOT_PATH . '/bootstrap/app.php', // 保留框架不变
         //'lumen' => __DIR__ . '/../bootstrap/lumen.php',
-        'lumen' => ROOT_PATH . '/vendor/yangze/Lamen/src/FrameWork/bootstrap/lumen.php',
+        'lumen' => ROOT_PATH . '/vendor/yangze/lamen/src/FrameWork/bootstrap/lumen.php',
     ],
     'artisan' => [
         'laravel' => ROOT_PATH . '/artisan',
-        'lumen' => ROOT_PATH . '/vendor/yangze/Lamen/src/FrameWork/app/artisan_lumen',
+        'lumen' => ROOT_PATH . '/vendor/yangze/lamen/src/FrameWork/app/artisan_lumen',
     ],
     'exceptions' => [
         'laravel' => App\Exceptions\Handler::class,

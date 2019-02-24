@@ -134,6 +134,12 @@ abstract class HttpServiceProvider extends ServiceProvider
         $port = $this->app['config']->get('swoole_http.server.port');
         $socketType = $this->app['config']->get('swoole_http.server.socket_type', SWOOLE_SOCK_TCP);
 
+        if ($this->framework == 'lumen') {
+            $host = $this->app['config']->get('swoole_lumen.server.host');
+            $port = $this->app['config']->get('swoole_lumen.server.port');
+            $socketType = $this->app['config']->get('swoole_lumen.server.socket_type', SWOOLE_SOCK_TCP);
+        }
+
         static::$server = new $server($host, $port, SWOOLE_PROCESS, $socketType);
     }
 
