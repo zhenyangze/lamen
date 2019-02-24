@@ -27,6 +27,7 @@ php artisan vendor:publish --tag=lamen-swoole
 | 键 | 名称 | 值 |
 |--------|--------|--------|
 |FRAME_WORK_NAME|当前框架的名称|laravel 或者 lumen|
+
 5、运行
 **以laravel模型运行**
 ```php
