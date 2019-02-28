@@ -65,7 +65,7 @@ class HttpServerCommand extends Command
      */
     protected function loadConfigs()
     {
-        $this->configs = $this->laravel['config']->get('swoole_http');
+        $this->configs = $this->laravel['config']->get(FRAME_WORK_NAME == 'lumen' ? 'swoole_lumen' : 'swoole_http');
     }
 
     /**

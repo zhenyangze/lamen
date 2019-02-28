@@ -350,7 +350,7 @@ class Manager
         if ($this->isMacOS() || $this->isInTesting()) {
             return;
         }
-        $serverName = FRAME_WORK_NAME . 'swoole_http_server';
+        $serverName = FRAME_WORK_NAME . '_swoole_http_server';
         $appName = $this->container['config']->get('app.name', 'Laravel');
 
         $name = sprintf('%s: %s for %s', $serverName, $process, $appName);

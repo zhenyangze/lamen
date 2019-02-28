@@ -87,10 +87,11 @@ use Symfony\Component\Finder\Finder;
 foreach(get_lamen_config('configs') as $configPath) {
     foreach (Finder::create()->files()->name('*.php')->in($configPath) as $file)
     {
-        $filename = trim($file->getFileName(), '.php');
-        if(!empty($filename)){
-            $app->configure($filename);
+        $filename = substr($file->getFileName(), 0, -4);
+        if(empty($filename)){
+            continue;
         }
+        $app->make('config')->set($filename, array_merge(config($filename, []), require $file->getRealPath()));
     }
 }
 
