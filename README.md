@@ -35,7 +35,7 @@ php artisan lamen:http start
 ```
 **以lumen模式运行**
 ```php
-php artisan_lume lamen:http start
+php artisan_lumen lamen:http start
 ```
 
 **以nginx+php-fpm模式运行**
