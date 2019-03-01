@@ -53,6 +53,14 @@ php artisan_lumen lamen:http start
 1、路由正则配置模式有差别，在针对lumen的路由中不要出现laravel路由相应的写法，否则会提示route找不到或者为空的情况
 
 2、laravel中获取路由参数和Lumen中获取路由参数不一样，需要写兼容方法调用
+在lumen的collection或者middleware中使用request()->get(),request()->all(), 
+
+需要修改成
+```php
+$route=$request->route();
+$route[2]['url参数'];
+```
+在post中可以使用request()->input
 
 3、Lumen bug
 ```php
