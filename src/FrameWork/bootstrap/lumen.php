@@ -62,11 +62,9 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware(get_lamen_config('middlewares'));
 
-$app->routeMiddleware(get_lamen_config('middlewares'));
+$app->routeMiddleware(get_lamen_config('route_middlewares'));
 
 /*
 |--------------------------------------------------------------------------

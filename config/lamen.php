@@ -42,6 +42,9 @@ return [
     ],
     // 中间件
     'middlewares' => [
+        //App\Http\Middleware\OldMiddleware::class
+    ],
+    'route_middlewares' => [
         //'auth' => App\Http\Middleware\Authenticate::class,
         //'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ],
